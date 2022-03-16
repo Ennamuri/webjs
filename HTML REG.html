@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration form</title>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <table>
+        <form name="myform" method="post" action="sucess.html" onsubmit="return validateform()">
+            <tr>
+                <td><label for="firstname">firstname:</label></td>
+                <td><input type="text" id="firstname" value=""></td>
+                <td><label for="lastname">lastname:</label></td>
+                <td><input type="text" id="lastname" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="phoneno">phoneno:</label></td>
+                <td><input type="text" id="phoneno" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="address">address:</label></td>
+                <td>
+                    <textarea name="address" id="address" cols="14" rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="postalcode">postalcode:</label></td>
+                <td><input type="text" id="postalcode" value=""></td>
+            </tr>
+            <tr>
+                <td><label for="nationality">nationality:</label></td>
+                <td><select id="nationality">
+                        <option value=""></option>
+                        <option value="indian">indian</option>
+                        <option value="non-indian">non-indian</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label for="gender">gender:</label></td>
+                <td><input type="radio" id="male" name="gender" value="male">
+                    <label for="gender">male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="gender">female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="submit" name="submit" value="submit"></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function validateform() {
+            var firstname = document.getElementById("firstname");
+            var lastname = document.getElementById("lastname");
+            var phoneno = document.getElementById("phoneno");
+            var address = document.getElementById("address");
+            var postalcode = document.getElementById("postalcode");
+            var nationality = document.getElementById("nationality");
+            var male = document.getElementById("male");
+            var female = document.getElementById("female");
+            if (firstname.value.trim() == "") {
+                alert("enter the firstname");
+                return false;
+            }
+            else if (lastname.value.trim() == "") {
+                alert("enter the lastname");
+                return false;
+            }
+            else if (phoneno.value.trim() == "") {
+                alert("enter the 10digit phoneno");
+                return false;
+            }
+            else if (address.value.trim() == "") {
+                alert("enter the address");
+                return false;
+            }
+            else if (postalcode.value.trim() == "") {
+                alert("enter the postalcode");
+                return false;
+            }
+            else if (nationality.value == "") {
+                alert("please select nationality");
+                return false;
+            }
+            else if ((male.checked == false) && (female.checked == false)) {
+                alert("select the gender");
+                return false;
+            }
+            else  {
+
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
