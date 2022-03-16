@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>h0sisting</title>
+    </head>
+    <body>
+        <h3 id ="old">javascript hoisting</h3>
+        <p id ="p1"></p>
+        <script>
+            let p1 = document.getElementById("p1");
+            class getnum1{
+                constructor(){
+                    this.x = 6;
+                }
+            }
+            getNum = new getnum1() ;
+                p1.innerHTML = `num1 is ${getNum.x}`;
+        </script>
+    </body>
+</html>
