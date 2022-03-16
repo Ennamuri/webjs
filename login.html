@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Registration form</title>
+
+</head>
+
+<body>
+
+<h1>Registration Form</h1>
+
+<table>
+
+<form name ="myform" method="post" action="success.html" onsubmit="return validate()">
+
+<tr>
+
+<td><label for="firstname">firstname:</label></td>
+
+<td><input type="text" name="firstname" value="firstname" requried></td>
+
+<td><label for="lastname">lastname:</label></td>
+
+<td><input type="text" name="lastnamename" value="lastname" requried></td>
+
+</tr>
+
+<tr>
+
+<td><label for="phone no">phone no:</label></td>
+
+<td><input type="text" name="phone no" value="phone no" requried></td>
+
+</tr>
+
+<tr>
+
+<td><label for="address">address:</label></td>
+
+<td><input type="text area" name="adddress" value="address" requried></td>
+
+</tr>
+
+<tr>
+
+<td><label for="postal code">postal code:</label></td>
+
+<td><input type="text" name="postal code" value="postal code" requried></td>
+
+</tr>
+
+<tr>
+
+<td><label for="Nationality">Nationality:</label></td>
+
+<td><select name="Nationality" value="Nationality">
+
+<option value=" "> </option>
+
+<option value="indian">indian</option>
+
+<option value="non-indian">non-indian</option>
+
+</select></td>
+
+</tr>
+
+<tr>
+
+<td><label for="Gender">Gender:</label></td>
+
+<td><input type="radio" name="male" value="male">
+
+<label for="Gender">male:</label>
+
+<input type="radio" name="female" value="female">
+
+<label for="Gender">female</label></td>
+
+</tr>
+
+<tr>
+
+<td><input type="submit" value="submit" name=""></td>
+
+</tr>
+
+</form>
+
+</table>
+ <script>
+
+function validate()​
+{
+  var firstname = document.forms["myform"]["firstname"].value;
+
+  var lastname = document.forms["myform"]["lastname"].value;
+
+  var phone_no = document.forms["myform"]["phone no"].value;
+
+  var address = document.forms["myform"]["address"].value;
+
+  var postal_code = document.forms["myform"]["postal code"].value;
+
+  var Gender = document.forms["myform"]["Gender"].value;
+
+  var Nationality = document.forms["myform"]["Nationality"].value;
+
+  if(firstname == null || firstname == "")
+  ​​​​​
+
+   alert('enter the firstname');
+
+    return false;
+
+    ​​​​
+
+    if(lastname == null || lastname == "")
+
+ ​​​​​
+
+   alert('enter the lastnamename');
+
+    return false;
+
+    ​​​​​
+
+   if(phone no == "");
+
+ ​​​​​
+
+  alert("enter phone no");
+
+   return false;
+
+ ​​​​​
+
+ if(isNaN(phone no))
+
+ ​​​​​
+
+ alert("must be 10 digit no");
+
+ return false;
+
+ ​​​​​ if(address == "")
+
+​​​​​
+
+alert("enter the address");
+
+return false;
+
+​​​​​ 
+
+if(postal code =="")
+
+​​​​​
+
+alert("must be digits only");
+
+return false;
+
+​​​​​ 
+
+if(Nationality ==" ")
+
+​​​​​
+
+alert("select a Nationality");
+
+return false;
+
+​​​​​            
+  if(Gender ==" ")
+
+​​​​​
+
+alert("select a Gender");
+
+return false;
+
+}​​​​​​​​​            
+validate();
+
+</script>
+
+</body>
+
+</html>    
+
